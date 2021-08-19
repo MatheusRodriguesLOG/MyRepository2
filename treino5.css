@@ -1,0 +1,449 @@
+/*site jornalistico simples*/
+/*em construção por Matheus Rodrigues*/
+/*reset do css*/
+* {
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    min-height: 100%;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.color {
+    color: #16161d;
+}
+/*barra de navegação do meu site jornalistico*/
+/*barra simples sem pesquisa*/
+.nav-bar {
+    list-style-type: none;
+    background-color: #16161d;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+}
+/*.fix {
+    position: fixed;
+    list-style-type: none;
+    background-color: #16161d;
+    overflow: auto;
+    padding: 0;
+}*/
+.nav-bar li {
+    float: left;
+    list-style: none;
+}
+.hyper-links {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(228, 228, 228);
+    text-align: center;
+    padding: 15px 16px;
+}
+.hyper-links:hover {
+    background: rgb(45, 45, 45);
+}
+.active {
+    text-transform: uppercase;
+    background:  rgb(121, 121, 121);
+}
+.active:hover {
+    background: rgb(160, 160, 160);
+    color: rgb(255, 255, 255);
+}
+
+#menu {
+    float: right;
+    position: relative;
+    text-decoration: none;
+    color: rgb(228, 228, 228);
+    text-align: center;
+    padding: 4px;
+    font-size: 30px;
+    margin-right: 20px;
+    display: none;
+}
+/*titulo do meu site jornalistico*/
+#title {
+    position: relative;
+    top: 30px;
+    bottom: 30px;
+    text-align: center;
+    font-size: 50px;
+}
+
+#p-one {
+    text-align: center;
+    font-size: 20px;
+}
+/* sessao de noticias atuais*/
+/*sempre composto pelas 3 noticias mais importantes e atuais*/
+.container-one {
+    font-size: 18px;
+    font-family:  Helvetica, Arial, sans-serif;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 70vh;
+}
+#current-news {
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.box-news {
+    width: 26vw;
+    height: 60vh;
+    margin: 10px;
+    padding: 10px;
+    background: rgb(241, 241, 241);
+}
+.box-news img {
+    width: 100%;
+    height: auto;
+}
+.learn-more {
+    text-decoration: none;
+    color: #16161d;
+    font-size: 20px;
+}
+.learn-more:hover {
+    text-decoration: underline;
+}
+.filter {
+    background: rgb(241, 241, 241);
+    border-radius: 5px;
+    text-align: center;
+    width: 70vw;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.links-news {
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 2px;
+    margin: 10px;
+}
+.links-news:hover {
+    background:rgb(230, 230, 230) ;
+}
+/*definindo a section de noticias*/
+/*essa section e destinada a noticias menos importantes que as noticias da primeira section*/
+.container-two {
+    font-size: 16px;
+    font-family:  Helvetica, Arial,sans-serif;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: 
+    'box-one box-two'
+    'box-tree box-for'
+    'box-five box-six';
+    gap: 100px;
+}
+.relevant-news {
+    width: 26vw;
+    height: 60vh;
+    background: rgb(241, 241, 241);
+}
+.right-side {
+    display: inline;
+    margin-top: 0;
+}
+.box-one {
+    grid-area: 'box-one';
+}
+.box-two {
+    grid-area: 'box-two';
+}
+.box-tree {
+    grid-area: 'box-tree';
+}
+.box-for {
+    grid-area: 'box-for';
+}
+.box-five {
+    grid-area: 'box-five';
+}
+.box-six {
+    grid-area: 'box-six';
+}
+#p {
+    display: inline-block;
+}
+.container-sports {
+    margin: 100px;
+    padding: 5px;
+    font-size: 40px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-sport {
+    width: 80%;
+    height: 300px;
+    background: linear-gradient(rgb(236, 236, 236), rgb(158, 158, 158));
+    text-align: center;
+}
+textarea {
+    resize: none;
+}
+.form {
+    border-radius: 20px;
+    width: 100%;
+    height: 140vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.form fieldset {
+    border: none;
+}
+.form fieldset legend {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    background: rgb(236, 236, 236);
+    margin: 10px;
+}
+.form input, textarea, label {
+    margin: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+#submit {
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    height: 10%;
+    background: rgb(236, 236, 236);
+}
+#submit:hover {
+    background: rgb(179, 179, 179);
+}
+footer {
+    background: #16161d;
+    width: 100%;
+    height: 200px;
+    margin-top: 50px;
+    padding: 10px;
+    color: white;
+}
+.decoration-none {
+    text-decoration: none;
+    color: white;
+}
+.finals {
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.finals:hover {
+    text-decoration: underline;
+}
+/*vou colocar o site resonsivo usando media queris
+*/
+/*responsividade*/
+@media (max-width: 512px) {
+    .nav-bar {
+        list-style-type: none;
+        background-color: #16161d;
+        padding: 0;
+        position: fixed;
+        width: 100%;
+    }
+}
+@media (max-width: 800px) {
+    .container-sports {
+        margin: 100px;
+        padding: 5px;
+        font-size: 40px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-sport {
+        width: 90%;
+        height: 350px;
+        background: linear-gradient(rgb(236, 236, 236), rgb(158, 158, 158));
+        text-align: center;
+    }
+}
+@media (max-width: 728px) {
+    .container-one {
+        font-size: 18px;
+        font-family:  Helvetica, Arial, sans-serif;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 200vh;
+    }
+    .box-news {
+        width: 50vw;
+        height: 70vh;
+        margin: 10px;
+        padding: 10px;
+        background: rgb(241, 241, 241);
+    }
+    .box-news img {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 690px) {
+    .container-sports {
+        margin: 100px 10px 100px 10px;
+        padding: 5px;
+        font-size: 40px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-sport {
+        width: 95%;
+        height: 200px;
+        background: linear-gradient(rgb(236, 236, 236), rgb(158, 158, 158));
+        text-align: center;
+    }
+}
+@media (max-width: 656px) {
+    .container-two {
+        font-size: 16px;
+        font-family:  Helvetica, Arial,sans-serif;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: 
+        'box-one'
+        'box-two'
+        'box-tree'
+        'box-for'
+        'box-five'
+        'box-six';
+        gap: 50px;
+    }
+    .relevant-news {
+        width: 60vw;
+        height: 68vh;
+        background: rgb(241, 241, 241);
+    }
+}
+@media (max-width: 528px) {
+    textarea {
+        resize: none;
+        width: 90vw;
+        height: 200px;
+    }
+}
+@media (max-width: 500px) {
+    .container-one {
+        font-size: 18px;
+        font-family:  Helvetica, Arial, sans-serif;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 200vh;
+    }
+    .box-news {
+        width: 85vw;
+        height: 74vh;
+        margin: 10px;
+        padding: 10px;
+        background: rgb(241, 241, 241);
+    }
+    .box-news img {
+        width: 100%;
+        height: auto;
+    }
+    .container-two {
+        font-size: 16px;
+        font-family:  Helvetica, Arial,sans-serif;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: 
+        'box-one'
+        'box-two'
+        'box-tree'
+        'box-for'
+        'box-five'
+        'box-six';
+        gap: 50px;
+    }
+    .relevant-news {
+        width: 85vw;
+        height: 70vh;
+        background: rgb(241, 241, 241);
+    }
+}
+@media (max-width: 417px) {
+    textarea {
+        resize: none;
+        width: 70vw;
+        height: 150px;
+    }
+    .form {
+        width: 100%;
+        height: 140vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .form fieldset {
+        border: none;
+    }
+    .form fieldset legend {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px;
+        background: rgb(236, 236, 236);
+        margin: 10px;
+    }
+    .form, input, textarea, label {
+        margin: 20px;
+        padding: 2px;
+        font-size: 18px;
+    }
+    #submit {
+        align-self: center;
+        border: none;
+        cursor: pointer;
+        width: 60%;
+        height: 50px;
+        background: rgb(236, 236, 236);
+    }
+}
